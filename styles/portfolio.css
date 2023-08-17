@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    height: calc(100vh - 8em);
+    padding: 4em;
+    color: rgba(255,255,255,.75);
+    font-family: 'Anonymous Pro', monospace;  
+    background-color: rgb(25,25,25);  
+  }
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: aliceblue;
+
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 60px;
+    z-index: 111;
+    background-color: crimson;
+}
+b{
+    font-size: 70px;
+    color: blueviolet;
+    
+}
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color:darkmagenta;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.navItems{
+    display: flex;
+}
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+
+}
+.navItems li a{
+    font-size: 25px;
+    color: coral;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover a{
+    color: cyan;
+}
+.links a{
+    font-size: 30px;
+    color: darksalmon;
+
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+.cols{
+    width: 50%;
+}
+.topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: darkolivegreen;
+}
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: blueviolet;
+}
+h1{
+    display: block;
+    font-size: 7em;
+    font-weight: 900;
+    color: darkcyan;
+}
+.multiText{
+    position: relative;
+    top: 50%;  
+    width: 10em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+
+}
+p{
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: darkgray;
+
+}
+.buttons{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 300;
+    color: darkgray;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0,0,0 ,0.4);
+}
+button:hover{
+    background-color: fuchsia;
+}
+.zoomin{
+    font-size: 24px;
+    background-color: bisque;
+    transition: background-color 1s width 1s;
+}
+.zoomin:hover{
+    font-size: 48px;
+    background-color: burlywood;
+}
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.imgbox img{
+    display: none;
+    position: relative;
+    height: 100%;
+    width: calc(130%-80px);
+    top: -100px;
+    right: 50px;
+    transform: rotateY(180deg);
+    animation: animateUser 4s linear infinite;
+
+}
+@keyframes animateUser{
+    50%{
+        right: 30px;
+        top:-90px;
+    }
+
+}
+.imgbox #splash{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-35seg);
+    width: 160%;
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+}
+.anim-typewriter{
+    animation: typewriter 4s steps(50) 1s infinite both, 
+    blinkTextCouror 500ms steps(50) infinite normal;
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+@keyframes animate{
+    50%{
+        top: 49%;
+        left: 51%;
+    }
+}
+
+@keyframes typewriter{
+    from{width: 0px;}
+    to{width: 3500px;}
+}
+
